@@ -52,7 +52,7 @@ def save_employees(employees):
 
     with open(DATA_FILE, "w") as file:
         json.dump(data, file, indent=4)
-    print("All employee data saved. Your boss will be proud!")
+    print("All employee data saved. Your boss will be happy!")
 
 
 def add_employee(employees, name):
@@ -65,7 +65,7 @@ def add_employee(employees, name):
 
 def update_leave_history(employees, name, leave_request):
     if name not in employees:
-        print("Oops! No such employee found.")
+        print("No such employee found.")
         return
 
     employees[name].leave_history.append(leave_request)
