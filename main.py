@@ -1,7 +1,7 @@
 from ai import get_intent_and_entities
 from database import load_employees, save_employees, add_employee
 from utils import parse_natural_date, validate_date_range
-from datetime import datetime
+from datetime import datetime, timedelta
 
 print("\nWelcome to the Leave Management System")
 
@@ -67,6 +67,7 @@ while True:
             print("Couldn't understand the cancellation date.")
             continue
 
+        # print(f"Trying to cancel leave on: {cancel_date}")
         employee.cancel_leave(cancel_date)
 
     elif intent == "view_history":

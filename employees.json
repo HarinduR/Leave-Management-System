@@ -1,0 +1,68 @@
+{
+    "employees": {
+        "Harindu": {
+            "leave_balance": {
+                "Sick Leave": 5,
+                "Annual Leave": 10,
+                "Maternity Leave": 0
+            },
+            "leave_history": []
+        },
+        "How Many Annual Leaves Do I Have Left?": {
+            "leave_balance": {
+                "Sick Leave": 5,
+                "Annual Leave": 10,
+                "Maternity Leave": 0
+            },
+            "leave_history": []
+        },
+        "Kavindu": {
+            "leave_balance": {
+                "Sick Leave": 5,
+                "Annual Leave": 10,
+                "Maternity Leave": 0
+            },
+            "leave_history": []
+        },
+        "Upul": {
+            "leave_balance": {
+                "Sick Leave": 5,
+                "Annual Leave": 10,
+                "Maternity Leave": 0
+            },
+            "leave_history": []
+        },
+        "Pip Install Dateparser": {
+            "leave_balance": {
+                "Sick Leave": 5,
+                "Annual Leave": 10,
+                "Maternity Leave": 0
+            },
+            "leave_history": []
+        },
+        "I Want To Take 2 Sick Leaves Starting From Next Monday.": {
+            "leave_balance": {
+                "Sick Leave": 5,
+                "Annual Leave": 10,
+                "Maternity Leave": 0
+            },
+            "leave_history": []
+        },
+        "How Many Sick Leaves Do I Have Left?": {
+            "leave_balance": {
+                "Sick Leave": 5,
+                "Annual Leave": 10,
+                "Maternity Leave": 0
+            },
+            "leave_history": []
+        },
+        "Jhon": {
+            "leave_balance": {
+                "Sick Leave": 5,
+                "Annual Leave": 10,
+                "Maternity Leave": 0
+            },
+            "leave_history": []
+        }
+    }
+}

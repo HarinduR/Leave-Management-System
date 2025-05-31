@@ -59,27 +59,27 @@ class Employee:
 
     def check_balance(self, leave_type):
         balance = self.leave_balance.get_balance(leave_type)
-        print(f"{self.name}, you have {balance} {leave_type.lower()}s left. Use wisely!")
+        print(f"{self.name}, you have {balance} {leave_type.lower()}s left.")
 
     def request_leave(self, leave_type, start_date, end_date):
         num_days = (end_date - start_date).days + 1
 
         if self.leave_balance.get_balance(leave_type) < num_days:
-            print("Not enough leaves left, boss! Try fewer days or different type.")
+            print("Not enough leaves left, Try fewer days or different type.")
             return
 
         new_request = LeaveRequest(leave_type, start_date, end_date, num_days)
         self.leave_history.append(new_request)
         self.leave_balance.update_balance(leave_type, num_days)
 
-        print(f"{num_days} day(s) of {leave_type} requested from {start_date.date()} to {end_date.date()}.")
+        print(f"{num_days} day(s) of {leave_type} requested from {start_date} to {end_date}.")
 
     def cancel_leave(self, target_date):
         for leave in self.leave_history:
-            if leave.start_date <= target_date <= leave.end_date and leave.status == "Pending":
+            if leave.start_date <= target_date <= leave.end_date and leave.status.lower() == "pending":
                 leave.status = "Cancelled"
                 self.leave_balance.update_balance(leave.leave_type, -leave.num_days)
-                print(f"Your leave from {leave.start_date.date()} has been cancelled and balance refunded!")
+                print(f"Your leave from {leave.start_date} has been cancelled and balance refunded!")
                 return
         print("No matching leave found to cancel on that date.")
 

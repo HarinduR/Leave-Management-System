@@ -48,24 +48,24 @@ User: {user_input}
 """
 
     try:
-        print("Thinking with Gemini...")
+        print("\nThinking with Gemini...")
 
         response = model.generate_content(prompt)
         content = response.text.strip()
 
-        print("\nRaw Gemini Response:")
-        print(content)
+        # print("\nRaw Gemini Response:")
+        # print(content)
 
         if content.startswith("```"):
             content = re.sub(r"```(json)?", "", content).strip()
             content = content.replace("```", "").strip()
 
-        print("\nCleaned Response Before Parsing:")
-        print(content)
+        # print("\nCleaned Response Before Parsing:")
+        # print(content)
 
         parsed = json.loads(content)
-        print("\nParsed Result:")
-        print(parsed)
+        # print("\nParsed Result:")
+        # print(parsed)
 
         return parsed
 
