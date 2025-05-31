@@ -63,6 +63,36 @@
                 "Maternity Leave": 0
             },
             "leave_history": []
+        },
+        "John": {
+            "leave_balance": {
+                "Sick Leave": 2,
+                "Annual Leave": 10,
+                "Maternity Leave": 0
+            },
+            "leave_history": [
+                {
+                    "leave_type": "Sick Leave",
+                    "start_date": "2025-06-02",
+                    "end_date": "2025-06-03",
+                    "num_days": 2,
+                    "status": "Cancelled"
+                },
+                {
+                    "leave_type": "Annual Leave",
+                    "start_date": "2025-07-05",
+                    "end_date": "2025-07-07",
+                    "num_days": 3,
+                    "status": "Cancelled"
+                },
+                {
+                    "leave_type": "Sick Leave",
+                    "start_date": "2025-06-12",
+                    "end_date": "2025-06-14",
+                    "num_days": 3,
+                    "status": "Pending"
+                }
+            ]
         }
     }
 }

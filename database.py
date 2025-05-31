@@ -52,7 +52,7 @@ def save_employees(employees):
 
     with open(DATA_FILE, "w") as file:
         json.dump(data, file, indent=4)
-    print("All employee data saved. Your boss will be happy!")
+    # print("All employee data saved.")
 
 
 def add_employee(employees, name):
