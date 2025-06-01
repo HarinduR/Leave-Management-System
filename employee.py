@@ -65,20 +65,20 @@ class Employee:
         num_days = (end_date - start_date).days + 1
 
         if self.leave_balance.get_balance(leave_type) < num_days:
-            print(
-                f"Hi {self.name}, your request for {num_days} days of {leave_type} was declined due to insufficient balance."
-            )
+            # print(
+            #     f"Hi {self.name}, your request for {num_days} days of {leave_type} was declined due to insufficient balance."
+            # )
             return
 
         new_request = LeaveRequest(leave_type, start_date, end_date, num_days)
         self.leave_history.append(new_request)
         self.leave_balance.update_balance(leave_type, num_days)
 
-        print(
-            f"Hi {self.name}, your {num_days}-day {leave_type.lower()} request from "
-            f"{start_date.strftime('%B %d')} to {end_date.strftime('%B %d')} has been approved. "
-            f"Enjoy your time off!"
-        )
+        # print(
+        #     f"Hi {self.name}, your {num_days}-day {leave_type.lower()} request from "
+        #     f"{start_date.strftime('%B %d')} to {end_date.strftime('%B %d')} has been approved. "
+        #     f"Enjoy your time off!"
+        # )
 
     def cancel_leave(self, target_date):
         for leave in self.leave_history:
@@ -92,7 +92,7 @@ class Employee:
                 return
         print(
             f"Hi {self.name}, no matching pending leave was found on {target_date.strftime('%B %d')}. "
-            "Please double-check your request."
+            "Please check your request."
         )
 
     def view_history(self, year=None):
@@ -106,4 +106,4 @@ class Employee:
                     f"to {leave.end_date.strftime('%b %d')} | {leave.status}"
                 )
         if not found:
-            print("No leaves taken yet... time to plan a trip maybe?")
+            print("No leaves taken yet...")
